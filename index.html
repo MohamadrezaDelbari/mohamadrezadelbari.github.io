@@ -21,11 +21,16 @@
         a:hover {
             text-decoration: underline;
         }
+        
+        /* Header and Menu Styles */
         header {
-            display: flex;
-            gap: 30px;
             border-bottom: 2px solid #ddd;
             padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header-content {
+            display: flex;
+            gap: 30px;
             margin-bottom: 20px;
         }
         .profile-img {
@@ -43,6 +48,26 @@
         .contact-info p {
             margin: 2px 0;
         }
+        
+        /* Navigation Bar Styles */
+        .nav-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .nav-menu a {
+            font-weight: bold;
+            color: #444;
+            font-size: 16px;
+        }
+        .nav-menu a:hover {
+            color: #0044cc;
+        }
+
+        /* Section Styles */
         h2 {
             font-size: 18px;
             border-bottom: 1px solid #eee;
@@ -68,25 +93,36 @@
 <body>
 
     <header>
-        <img src="CV_photo.png" alt="Mohamadreza Delbari" class="profile-img">
-        
-        <div class="contact-info">
-            <h1>Mohamadreza Delbari</h1>
-            <p><strong>PhD Student & Research Assistant</strong></p>
-            <p>Technical University of Darmstadt (TU Darmstadt)</p>
-            <p>Supervisor: Prof. Vahid Jamali</p>
-            <br>
-            <p><strong>Address:</strong> Rundeturmstraße 10, 64283 Darmstadt, Germany</p>
-            <p><strong>Email:</strong> <a href="mailto:mohamadreza.delbari@tu-darmstadt.de">mohamadreza.delbari@tu-darmstadt.de</a></p>
-            <br>
-            <p>
-                [<a href="https://scholar.google.com/citations?user=-uEVA-UAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>]
-                [<a href="https://www.linkedin.com/in/mohamadreza-delbari" target="_blank">LinkedIn</a>]
-            </p>
+        <div class="header-content">
+            <img src="CV_photo.png" alt="Mohamadreza Delbari" class="profile-img">
+            
+            <div class="contact-info">
+                <h1>Mohamadreza Delbari</h1>
+                <p><strong>PhD Student & Research Assistant</strong></p>
+                <p>Technical University of Darmstadt (TU Darmstadt)</p>
+                <p>Supervisor: Prof. Vahid Jamali</p>
+                <br>
+                <p><strong>Address:</strong> Rundeturmstraße 10, 64283 Darmstadt, Germany</p>
+                <p><strong>Email:</strong> <a href="mailto:mohamadreza.delbari@tu-darmstadt.de">mohamadreza.delbari@tu-darmstadt.de</a></p>
+                <br>
+                <p>
+                    [<a href="https://scholar.google.com/citations?user=-uEVA-UAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>]
+                    [<a href="https://www.linkedin.com/in/mohamadreza-delbari" target="_blank">LinkedIn</a>]
+                </p>
+            </div>
         </div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="publications.html">Publications</a>
+            <a href="#presentations">Presentations</a>
+            <a href="#code">Simulation Code</a>
+            <a href="#students">Master Students</a>
+            <a href="https://www.etit.tu-darmstadt.de/rcs/team_rcs/rcs_kontakt_details_124800.en.jsp" target="_blank">University Profile</a>
+        </nav>
     </header>
 
-    <section>
+    <section id="research">
         <h2>Research Interests</h2>
         <p>My research focuses on wireless communications and optimization theory, with specific interests in:</p>
         <ul>
@@ -97,7 +133,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="education">
         <h2>Education</h2>
         <ul>
             <li>
@@ -120,7 +156,7 @@
         </ul>
     </section>
 
-    <section>
+    <section id="selected-publications">
         <h2>Selected Publications</h2>
         <ul>
             <li>
@@ -133,23 +169,62 @@
                 "Fast Transition-Aware Reconfiguration of Liquid Crystal-based RISs," 
                 <em>IEEE International Conference on Communications Workshops (ICC Workshops)</em>, pp. 214-219, 2024.
             </li>
-            <li>
-                <strong>M. Delbari</strong>, G. C. Alexandropoulos, R. Schober, V. Jamali, 
-                "Far- versus Near-Field RIS Modeling and Beam Design," 
-                <em>Book chapter in Metasurfaces for Wireless Communications, Springer</em>, 2024.
-            </li>
-            <li>
-                <strong>M. Delbari</strong>, A. Javaheri, H. Zayyani, F. Marvasti, 
-                "Non-Coherent DOA Estimation via Majorization-Minimization Using Sign Information," 
-                <em>IEEE Signal Processing Letters</em>, vol. 29, pp. 892-896, 2022.
-            </li>
         </ul>
         <p style="margin-top: 15px;">
             ➤ <a href="publications.html"><strong>View Full List of Publications</strong></a>
         </p>
     </section>
 
-    <section>
+    <section id="presentations">
+        <h2>Presentations</h2>
+        <ul>
+            <li><em>Coming soon.</em></li>
+        </ul>
+    </section>
+
+    <section id="code">
+        <h2>Simulation Code</h2>
+        <p>Source code for selected papers is available below:</p>
+        <ul>
+            <li>
+                <strong>[Code]</strong> for "Near-Field Multipath MIMO Channel Model..." <br>
+                <a href="#">[GitHub Link]</a>
+            </li>
+            <li>
+                <strong>[Code]</strong> for "Fast Transition-Aware Reconfiguration..." <br>
+                <a href="#">[GitHub Link]</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="students">
+        <h2>Supervised Students</h2>
+        <p>I have had the pleasure of supervising the following students at TU Darmstadt:</p>
+        <ul>
+            <li>
+                <strong>Qikai Zhou</strong> (M.Sc., 2025) <br>
+                <em>Topic: RIS Configuration in Wideband Multi-User Communication Scenario</em>
+            </li>
+            <li>
+                <strong>Alireza Tavakoli Marzoni</strong> (M.Sc., 2025) <br>
+                <em>Topic: Analysis and Optimization of LoRa-based Multiple Access</em>
+            </li>
+            <li>
+                <strong>Bowu Wang</strong> (M.Sc., 2024) <br>
+                <em>Topic: Temperature-aware Design of Large Liquid Crystal-based RIS</em>
+            </li>
+            <li>
+                <strong>Amirhossein Khosravi</strong> (M.Sc., 2024) <br>
+                <em>Topic: RIS Configuration Through Mapping of Multipath Channels</em>
+            </li>
+            <li>
+                <strong>Ehsan Mohammadi</strong> (SHK, 2024) <br>
+                <em>Topic: Flexible RIS</em>
+            </li>
+        </ul>
+    </section>
+
+    <section id="teaching">
         <h2>Teaching</h2>
         <ul>
             <li><strong>MIMO Communication Systems</strong> (Tutorial Instructor), TU Darmstadt (2023-2024)</li>
